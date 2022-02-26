@@ -64,31 +64,31 @@ import { useState } from "react";
 // }
 
 // bai tap 3
-// const gifts=[
-//     'i9 CPU',
-//     'Mainboard Z490',
-//     'Xigmatek OMG!',
-//     'Chúc bạn may mắn lần sau'
-// ]
-// function LearnUseState() {
+const gifts=[
+    'i9 CPU',
+    'Mainboard Z490',
+    'Xigmatek OMG!',
+    'Chúc bạn may mắn lần sau'
+]
+function LearnUseState() {
 
-//     const [ gift, setGift ] = useState();
+    const [ gift, setGift ] = useState();
 
-//     const randomGift = ()=>{
-//         let random = Math.floor(Math.random()*gifts.length);
-//         setGift(gifts[random]);
-//     }
+    const randomGift = ()=>{
+        let random = Math.floor(Math.random()*gifts.length);
+        setGift(gifts[random]);
+    }
 
-//     return (
-//         <div>
-//             <h1>Learning useState</h1>
-//             <h2>{ gift||'chưa nhận được phần thưởng nào' }</h2>
-//             <button onClick={randomGift}>
-//                 nhận quà
-//             </button>
-//         </div>
-//     )
-// }
+    return (
+        <div>
+            <h1>Learning useState</h1>
+            <h2>{ gift||'chưa nhận được phần thưởng nào' }</h2>
+            <button onClick={randomGift}>
+                nhận quà
+            </button>
+        </div>
+    )
+}
 
 
 // bai tap 4
@@ -135,56 +135,56 @@ import { useState } from "react";
 // }
 
 // bai tap 5
-const courses = [
-    {
-        id: 1,
-        name:'HTML, CSS'
-    },
-    {
-        id: 2,
-        name:'JavaScript'
-    },
-    {
-        id: 3,
-        name:'ReactJs'
-    }
-]
-function LearnUseState() {
+// const courses = [
+//     {
+//         id: 1,
+//         name:'HTML, CSS'
+//     },
+//     {
+//         id: 2,
+//         name:'JavaScript'
+//     },
+//     {
+//         id: 3,
+//         name:'ReactJs'
+//     }
+// ]
+// function LearnUseState() {
 
-    const [ checked, setChecked ] = useState([]);
+//     const [ checked, setChecked ] = useState([]);
 
-    const handleChecked = (id)=>{
-        setChecked((prev)=>{
-            const isChecked = checked.includes(id);
-            if(isChecked) {
-                return checked.filter(item=> item!==id);
-            }else{
-                return [...prev,id];
-            }
-        })
-    }
+//     const handleChecked = (id)=>{
+//         setChecked((prev)=>{
+//             const isChecked = checked.includes(id);
+//             if(isChecked) {
+//                 return checked.filter(item=> item!==id);
+//             }else{
+//                 return [...prev,id];
+//             }
+//         })
+//     }
 
-    const handleRegister = ()=>{
-        console.log({id:checked})
-    }
+//     const handleRegister = ()=>{
+//         console.log({id:checked})
+//     }
 
-    return (
-        <div>
-            <h1>Learning useState</h1>
-            {courses.map(course=>(
-                <div key={course.id}>
-                    <input
-                        type="checkbox"
-                        checked={checked.includes(course.id)}
-                        onChange={()=>handleChecked(course.id)}
-                    />
-                        {course.name}
-                </div>
-            ))}
-            <button onClick={handleRegister}>
-                Register
-            </button>
-        </div>
-    )
-}
+//     return (
+//         <div>
+//             <h1>Learning useState</h1>
+//             {courses.map(course=>(
+//                 <div key={course.id}>
+//                     <input
+//                         type="checkbox"
+//                         checked={checked.includes(course.id)}
+//                         onChange={()=>handleChecked(course.id)}
+//                     />
+//                         {course.name}
+//                 </div>
+//             ))}
+//             <button onClick={handleRegister}>
+//                 Register
+//             </button>
+//         </div>
+//     )
+// }
 export default LearnUseState; 

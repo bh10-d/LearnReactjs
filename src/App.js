@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 // import Example1 from './example1/FilterProductTable.component';
 import LearnUseState from './hook/LearnUseState.component';
+import LearnUseEffect from './hook/LearnUseEffect.component';
+import TodoApp from './example1/TodoApp.component';
 
 
 class Clock extends React.Component {
@@ -40,6 +42,8 @@ function App() {
         div className = "App" >
             <Clock />
             <LearnUseState />
+            <TodoApp/>
+            <LearnUseEffect />
         </div>
     );
 }

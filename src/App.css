@@ -7,3 +7,7 @@ h1{
 h2{
   color: aqua;
 }
+
+ul li {
+  list-style-type: none;
+}
