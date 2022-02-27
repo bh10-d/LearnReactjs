@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react";
 
 
+//bai tap 1
 const list = ['posts','comments','albums','photos','todos','users'];
 
 function Content (){
@@ -23,6 +24,10 @@ function Content (){
         }
     },[]);
 
+    const handleGotoTop = ()=>{
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
     return(
         <div>
             {list.map(tab => (
@@ -41,6 +46,7 @@ function Content (){
                         right: 20,
                         bottom: 20
                     }}
+                    onClick={handleGotoTop}
                 >
                     go to top
                 </button>
@@ -56,6 +62,7 @@ function Content (){
     )
 }
 
+//bai tap 2
 function Avatar(){
     const [avatar,setAvatar] = useState()
 
@@ -84,6 +91,55 @@ function Avatar(){
     )
 }
 
+// bai tap 3
+const lessons = [
+    {
+        id: 1,
+        name: 'ReactJS là gì? Tại sao nên học ReactJS?'
+    },
+    {
+        id: 2,
+        name: 'SPA/MPA là gì ?'
+    },
+    {
+        id: 3,
+        name: 'Arow function'
+    }
+]
+function Comment() {
+    const [lessonId,setLessonId] = useState(1)
+
+    useEffect(() => {
+        const handleComment = ({detail}) =>{
+            console.log(detail)
+        }
+        window.addEventListener(`lesson-${lessonId}`,handleComment)
+        //Clean Up
+
+        return ()=>{
+            window.removeEventListener(`lesson-${lessonId}`,handleComment)
+        }
+    },[lessonId])
+
+    return (
+        <div>
+            <ul>
+                {lessons.map(lesson => (
+                    <li 
+                        key={lesson.id}
+                        style={{
+                            color: lessonId === lesson.id ? 'red' : '#333'
+                        }}
+                        onClick={()=>setLessonId(lesson.id)}
+                    >
+                        {lesson.name}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    )
+}
+
 function LearnUseEffect() {
     const [toggle,setToggle] = useState(false);
     return(
@@ -95,7 +151,8 @@ function LearnUseEffect() {
                 Toggle
             </button>
             {/* {toggle && <Content />} */}
-            {toggle && <Avatar />}
+            {/* {toggle && <Avatar />} */}
+            {toggle && <Comment />}
         </div>
     )
     
