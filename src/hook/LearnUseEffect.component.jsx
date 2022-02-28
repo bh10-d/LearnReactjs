@@ -128,7 +128,8 @@ function Comment() {
                     <li 
                         key={lesson.id}
                         style={{
-                            color: lessonId === lesson.id ? 'red' : '#333'
+                            color: lessonId === lesson.id ? 'red' : '#333',
+                            cursor: 'pointer'
                         }}
                         onClick={()=>setLessonId(lesson.id)}
                     >

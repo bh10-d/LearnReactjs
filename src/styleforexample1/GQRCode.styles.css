@@ -1,0 +1,13 @@
+.pQRBox input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 10px;
+    font-size: 20px;
+    width: 60%;
+}
+
+.QRBox{
+    background-color: black ;
+}

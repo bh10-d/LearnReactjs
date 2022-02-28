@@ -4,6 +4,7 @@ import './App.css';
 import LearnUseState from './hook/LearnUseState.component';
 import LearnUseEffect from './hook/LearnUseEffect.component';
 import TodoApp from './example1/TodoApp.component';
+import GQRCode from './example1/GQRCode.component';
 
 
 class Clock extends React.Component {
@@ -43,6 +44,7 @@ function App() {
             <Clock />
             <LearnUseState />
             <TodoApp/>
+            <GQRCode/>
             <LearnUseEffect />
         </div>
     );
