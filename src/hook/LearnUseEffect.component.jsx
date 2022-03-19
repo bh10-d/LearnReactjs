@@ -151,9 +151,9 @@ function LearnUseEffect() {
             >
                 Toggle
             </button>
-            {/* {toggle && <Content />} */}
-            {/* {toggle && <Avatar />} */}
-            {toggle && <Comment />}
+            {toggle && <Content />}
+            {toggle && <Avatar />}
+            {/* {toggle && <Comment />} */}
         </div>
     )
     
