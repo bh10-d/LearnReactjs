@@ -22,9 +22,9 @@ function increment() {
 
 // bài 2
 
-const a;
-a = 100;
-console.log(a);
+// const a;
+// a = 100;
+// console.log(a);
 
 /*
     A) 100        B) Undefined
